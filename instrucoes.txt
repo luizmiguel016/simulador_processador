@@ -1,0 +1,18 @@
+1. Compilar o montador: cd /home/<seu_nome_de_usuario>/arq-sim-assembler
+1.1. Execute o comando make: make
+
+2. Navegue para a pasta do simulador: cd /home/<seu_nome_de_usuario>/arq-sim-c++
+2.1 Execute o comando make: make
+
+3. Compile o simulador (arq-sim) Navegue para a pasta do simulador: cd /home/<seu_nome_de_usuario>/arq-sim-c++
+3.1 Execute o comando make: make
+
+4. Navegue de volta para a pasta do montador: cd ../arq-sim-assembler
+
+5. Crie o diretório de saída (se não existir): mkdir -p asm-example-binario
+
+6. Execute o Montador para um arquivo de teste: for f in asm-example/*.asm; do ./pasm.exe "$f" "asm-example-binario/$(basename "$f" .asm).bin"; done
+
+7. Executar um Programa no Simulador: 
+7.1 Navegue para a pasta do simulador: cd ../arq-sim-c++
+7.2 Execute o Simulador: ./arq-sim ../arq-sim-assembler/asm-example-binario/teste_visivel.bin
